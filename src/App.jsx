@@ -9,6 +9,7 @@ import CookieConsent from './components/CookieConsent';
 import AIChatButton from './components/AIChatButton';
 import Footer from './components/Footer';
 import GetStarted from './components/GetStarted';
+import Pricing from './components/Pricing';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           } />
           <Route path="/get-started" element={<GetStarted />} />
         </Routes>
+        <Pricing />
         <Footer />
         <CookieConsent />
         <AIChatButton />

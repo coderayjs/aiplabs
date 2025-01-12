@@ -9,10 +9,10 @@ const Pricing = () => {
       <div className="container mx-auto relative">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 text-transparent bg-clip-text mb-6">
-            Simple, Transparent Pricing
+            Super, User-Private Trading Bot
           </h2>
           <p className="text-gray-400 text-xl max-w-2xl mx-auto">
-            Choose the perfect plan for your Twitter management needs
+            Choose the perfect plan for your trading needs. Unlimited, Mev-Optimized, and Private.
           </p>
         </div>
 
