@@ -6,6 +6,7 @@ import LogoCloud from './components/LogoCloud';
 import Pricing from './components/Pricing';
 import Footer from './components/Footer';
 import Products from './components/Products';
+import CookieConsent from './components/CookieConsent';
 import './index.css';
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Features />
         <Pricing />
       </main>
+      <CookieConsent />
       <Footer />
     </div>
   );
