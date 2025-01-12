@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import GetStarted from './GetStarted';
 
 const Hero = () => {
   return (
@@ -37,10 +39,13 @@ const Hero = () => {
             Automate, analyze, and optimize your social media strategy.
           </p>
           
-          <div className="flex items-center justify-center space-x-4 pt-8">
-            <button className="px-8 py-4 text-sm text-white border border-white/20 hover:border-white/40 rounded-md transition-colors bg-white/10 hover:bg-white/20 backdrop-blur-sm">
+          <div className="flex gap-4 justify-center">
+            <Link 
+              to="/get-started" 
+              className="px-8 py-4 text-sm text-white border border-white/20 hover:border-white/40 rounded-md transition-colors bg-white/10 hover:bg-white/20 backdrop-blur-sm"
+            >
               Get Started Free
-            </button>
+            </Link>
             <button className="px-8 py-4 text-sm text-gray-400 hover:text-white transition-colors flex items-center space-x-2">
               <svg 
                 className="w-5 h-5" 

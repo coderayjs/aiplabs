@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Products = () => {
   const products = [
@@ -75,7 +76,7 @@ const Products = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
           {products.map((product, index) => (
             <div 
               key={index}
@@ -132,9 +133,12 @@ const Products = () => {
                     {product.price}
                   </div>
 
-                  <button className="w-full px-4 py-2.5 text-sm font-medium text-white rounded-lg transition-all duration-300 bg-gradient-to-r hover:scale-[1.02] from-blue-500/10 to-purple-500/10 hover:from-blue-500/20 hover:to-purple-500/20 border border-white/10 hover:border-white/20 backdrop-blur-sm">
-                    Buy Access
-                  </button>
+                  <Link
+                    to="/signup"
+                    className="w-full px-6 py-3 text-sm font-medium text-white rounded-lg transition-all duration-300 bg-gradient-to-r hover:scale-[1.02] from-[#80C4E9]/10 to-purple-500/10 hover:from-[#80C4E9]/20 hover:to-purple-500/20 border border-white/10 hover:border-white/20 backdrop-blur-sm inline-block text-center"
+                  >
+                    Get Started
+                  </Link>
                 </div>
               </div>
             </div>
