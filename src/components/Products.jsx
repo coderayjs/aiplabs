@@ -12,7 +12,7 @@ const Products = () => {
         'Community growth tracking'
       ],
       gradient: 'from-[#3B82F6] via-[#6366F1] to-[#8B5CF6]',
-      price: '1 SOL',
+      price: 'FREE',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -29,7 +29,7 @@ const Products = () => {
         'Portfolio tracking'
       ],
       gradient: 'from-[#06B6D4] via-[#3B82F6] to-[#6366F1]',
-      price: '5 SOL',
+      price: '0.4 SOL',
       popular: true,
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -38,7 +38,7 @@ const Products = () => {
       )
     },
     {
-      name: 'Intelli-TREND Bot',
+      name: 'Intelli-Trading Bot',
       description: 'Stay ahead of the curve with our AI-powered trend detection bot. Identify emerging trends and optimize your content strategy in real-time.',
       features: [
         'Trend detection',
@@ -47,13 +47,14 @@ const Products = () => {
         'Audience insights'
       ],
       gradient: 'from-[#4F46E5] via-[#7C3AED] to-[#9333EA]',
-      price: '10 SOL',
+      price: '0.5 SOL',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
         </svg>
       )
     }
+    
   ];
 
   return (
