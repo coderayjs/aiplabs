@@ -13,6 +13,10 @@ const GetStarted = () => {
     wallet: false
   });
 
+  const BOT_USERNAME = process.env.REACT_APP_TELEGRAM_BOT_USERNAME;
+  const TELEGRAM_BOT_ID = process.env.REACT_APP_TELEGRAM_BOT_ID;
+  const BOT_NAME = process.env.REACT_APP_TELEGRAM_BOT_NAME;
+
   useEffect(() => {
     if (connected && publicKey) {
       setIsConnected(prev => ({ ...prev, wallet: true }));
@@ -20,27 +24,30 @@ const GetStarted = () => {
   }, [connected, publicKey]);
 
   const handleTelegramLogin = () => {
-    // Open Telegram login in a popup window
     const width = 550;
     const height = 470;
     const left = window.innerWidth / 2 - width / 2;
     const top = window.innerHeight / 2 - height / 2;
 
     const popup = window.open(
-      `https://oauth.telegram.org/auth?bot_id=YOUR_BOT_ID&origin=${window.location.origin}&request_access=write`,
+      `https://oauth.telegram.org/auth?bot_id=${TELEGRAM_BOT_ID}&origin=${encodeURIComponent(window.location.origin)}&embed=1&request_access=write&return_to=${encodeURIComponent(window.location.origin)}`,
       'Telegram Login',
       `toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=${width}, height=${height}, top=${top}, left=${left}`
     );
 
-    // Handle the response from Telegram
-    window.addEventListener('message', (event) => {
+    // Add event listener for popup messages
+    const handleMessage = (event) => {
       if (event.source === popup) {
         if (event.data.telegram) {
           setIsConnected(prev => ({ ...prev, telegram: true }));
           popup.close();
+          // Remove the event listener
+          window.removeEventListener('message', handleMessage);
         }
       }
-    });
+    };
+
+    window.addEventListener('message', handleMessage);
   };
 
   const handleContinue = () => {

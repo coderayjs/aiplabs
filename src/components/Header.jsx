@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -33,9 +34,9 @@ const Header = () => {
               </button>
             </li>
             <li>
-              <button className="px-4 py-2 text-sm text-white border border-white/20 hover:border-white/40 rounded-md transition-colors bg-white/10 hover:bg-white/20 backdrop-blur-sm">
+              <Link to="/get-started" className="px-4 py-2 text-sm text-white hover:text-blue-400 transition-colors">
                 Get Started
-              </button>
+              </Link>
             </li>
           </ul>
         </div>
