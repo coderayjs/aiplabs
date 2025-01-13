@@ -16,8 +16,10 @@
     "clsx": "^2.1.1",
     "cra-template": "1.2.0",
     "crypto-browserify": "^3.12.1",
+    "dotenv": "^16.4.7",
     "http-browserify": "^1.7.0",
     "https-browserify": "^1.0.0",
+    "mongoose": "^8.9.4",
     "os-browserify": "^0.3.0",
     "path-browserify": "^1.0.1",
     "process": "^0.11.10",
@@ -32,6 +34,8 @@
     "stream-http": "^3.2.0",
     "styled-components": "^6.1.14",
     "tailwind-merge": "^2.6.0",
+    "telegraf": "^4.16.3",
+    "twitter-api-v2": "^1.19.0",
     "url": "^0.11.4",
     "util": "^0.12.5"
   },
@@ -70,5 +74,10 @@
     "http": false,
     "https": false,
     "os": false
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "postcss.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
